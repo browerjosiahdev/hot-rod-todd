@@ -1,4 +1,4 @@
-# Rocket Game
+# Hot Rod Todd
 
 1. install node.js and npm: https://nodejs.org
 2. install python 2.7: https://www.python.org/downloads

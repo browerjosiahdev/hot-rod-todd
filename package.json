@@ -18,17 +18,18 @@
     "jspm": "^0.15.7",
     "systemjs-builder": "^0.10.6"
   },
-  "name": "rocket-game",
-  "description": "Rocket Game",
+  "name": "hot-rod-todd",
+  "description": "Hot Rod Todd",
   "version": "1.0.0",
   "main": "config.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "express": "^4.12.3",
+    "jquery": "^3.0.0",
     "path": "^0.11.14"
   },
   "jspm": {
@@ -37,6 +38,7 @@
     },
     "dependencies": {
       "filesaver": "github:eligrey/FileSaver.js@master",
+      "jquery": "npm:jquery@^3.0.0",
       "phaser": "github:photonstorm/phaser@^2.4.3",
       "toblob": "github:blueimp/JavaScript-Canvas-to-Blob@^2.2.0"
     },

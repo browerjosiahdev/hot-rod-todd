@@ -157,45 +157,45 @@ class Start extends Phaser.State {
   }
 
   createMenuItems ( data ) {
-    this.facebookBtn = this.game.add.button(250, 960, 'facebook', () => {
-      this.game.shareFacebook();
-    });
-
-    this.twitterBtn = this.game.add.button(334, 960, 'twitter', () => {
-      this.game.shareTwitter();
-    });
+    // this.facebookBtn = this.game.add.button(250, 960, 'facebook', () => {
+    //   this.game.shareFacebook();
+    // });
+    //
+    // this.twitterBtn = this.game.add.button(334, 960, 'twitter', () => {
+    //   this.game.shareTwitter();
+    // });
 
     this.startBtn = new TextButton(this.game, 86, 960, data.startBtn, 0x0F5EA3);
     this.startBtn.onInputDown.add(this.startGame, this);
     this.game.world.add(this.startBtn);
 
-    this.shareBtn = new TextButton(this.game, 86, 1045, data.shareBtn, 0xf58022);
-    this.shareBtn.onInputDown.add(this.shareGame, this);
-    this.game.world.add(this.shareBtn);
+    // this.shareBtn = new TextButton(this.game, 86, 1045, data.shareBtn, 0xf58022);
+    // this.shareBtn.onInputDown.add(this.shareGame, this);
+    // this.game.world.add(this.shareBtn);
 
-    this.eliteBtn = new TextButton(this.game, 86, 1130, data.eliteBtn, 0x2a7535);
-    this.eliteBtn.onInputDown.add(this.openElite, this);
-    this.game.world.add(this.eliteBtn);
+    // this.eliteBtn = new TextButton(this.game, 86, 1130, data.eliteBtn, 0x2a7535);
+    // this.eliteBtn.onInputDown.add(this.openElite, this);
+    // this.game.world.add(this.eliteBtn);
 
     const startTween = this.game.add.tween(this.startBtn)
       .to({y: 690}, 850, Phaser.Easing.Back.InOut)
       .delay(1400)
       .start();
 
-    const shareTween = this.game.add.tween(this.shareBtn)
-      .to({y: 775}, 850, Phaser.Easing.Back.InOut)
-      .delay(1700)
-      .start();
+    // const shareTween = this.game.add.tween(this.shareBtn)
+    //   .to({y: 775}, 850, Phaser.Easing.Back.InOut)
+    //   .delay(1700)
+    //   .start();
 
-    const eliteTween = this.game.add.tween(this.eliteBtn)
-      .to({y: 860}, 850, Phaser.Easing.Back.InOut)
-      .delay(2000)
-      .start();
+    // const eliteTween = this.game.add.tween(this.eliteBtn)
+    //   .to({y: 860}, 850, Phaser.Easing.Back.InOut)
+    //   .delay(2000)
+    //   .start();
 
-    shareTween.onComplete.add(() => {
-      this.facebookBtn.y = 775;
-      this.twitterBtn.y = 775;
-    });
+    // shareTween.onComplete.add(() => {
+    //   this.facebookBtn.y = 775;
+    //   this.twitterBtn.y = 775;
+    // });
   }
 
   createSoundAssets () {
@@ -220,8 +220,8 @@ class Start extends Phaser.State {
   }
 
   shareGame ( pointer, e ) {
-    this.game.soundFx.play('social-click');
-    this.shareBtn.visible = false;
+    // this.game.soundFx.play('social-click');
+    // this.shareBtn.visible = false;
   }
 
   openElite ( pointer, e ) {

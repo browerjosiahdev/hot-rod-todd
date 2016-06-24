@@ -41,31 +41,31 @@ class CharacterSelection extends Phaser.State {
     });
     title.x = (this.game.world.width - title.width) / 2;
 
-    this.facebookBtn = this.game.add.button(250, 704, 'facebook', () => {
-      this.game.shareFacebook();
-    });
-
-    this.twitterBtn = this.game.add.button(334, 704, 'twitter', () => {
-      this.game.shareTwitter();
-    });
+    // this.facebookBtn = this.game.add.button(250, 704, 'facebook', () => {
+    //   this.game.shareFacebook();
+    // });
+    //
+    // this.twitterBtn = this.game.add.button(334, 704, 'twitter', () => {
+    //   this.game.shareTwitter();
+    // });
 
     this.startBtn = new TextButton(this.game, 86, 622, characterSelectionData.startBtn, 0x0F5EA3);
     this.startBtn.onInputDown.add(this.startGame, this);
     this.game.world.add(this.startBtn);
 
-    this.shareBtn = new TextButton(this.game, 86, 704, characterSelectionData.shareBtn, 0xf58022);
-    this.shareBtn.onInputDown.add(this.shareGame, this);
-    this.game.world.add(this.shareBtn);
+    // this.shareBtn = new TextButton(this.game, 86, 704, characterSelectionData.shareBtn, 0xf58022);
+    // this.shareBtn.onInputDown.add(this.shareGame, this);
+    // this.game.world.add(this.shareBtn);
 
-    const elite = this.game.add.text(74, 815, characterSelectionData.elite, {
-      fill: "#000000",
-      font: "22px Arial",
-    });
-    elite.x = (this.game.world.width - elite.width) / 2;
+    // const elite = this.game.add.text(74, 815, characterSelectionData.elite, {
+    //   fill: "#000000",
+    //   font: "22px Arial",
+    // });
+    // elite.x = (this.game.world.width - elite.width) / 2;
 
-    this.eliteBtn = new TextButton(this.game, 86, 860, characterSelectionData.eliteBtn, 0x2a7535);
-    this.eliteBtn.onInputDown.add(this.openElite, this);
-    this.game.world.add(this.eliteBtn);
+    // this.eliteBtn = new TextButton(this.game, 86, 860, characterSelectionData.eliteBtn, 0x2a7535);
+    // this.eliteBtn.onInputDown.add(this.openElite, this);
+    // this.game.world.add(this.eliteBtn);
   }
 
   startGame ( pointer, e ) {
@@ -74,12 +74,12 @@ class CharacterSelection extends Phaser.State {
   }
 
   shareGame ( pointer, e ) {
-    this.game.soundFx.play('social-click');
-    this.shareBtn.visible = false;
+    // this.game.soundFx.play('social-click');
+    // this.shareBtn.visible = false;
   }
 
   openElite ( pointer, e ) {
-    this.game.openElite();
+    // this.game.openElite();
   }
 
   selectMan () {

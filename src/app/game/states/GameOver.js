@@ -62,32 +62,36 @@ class GameOver extends Phaser.State {
       font: "38px Arial"
     });
 
-    this.facebookBtn = this.game.add.button(250, 580, 'facebook', () => {
-      this.game.shareFacebook();
-    });
-
-    this.twitterBtn = this.game.add.button(334, 580, 'twitter', () => {
-      this.game.shareTwitter();
-    });
+    // NOTE: Remove the share buttons from the todd version of the
+    // game. This has been replaced with the high score screen.
+    // this.facebookBtn = this.game.add.button(250, 580, 'facebook', () => {
+    //   this.game.shareFacebook();
+    // });
+    //
+    // this.twitterBtn = this.game.add.button(334, 580, 'twitter', () => {
+    //   this.game.shareTwitter();
+    // });
 
     this.replayBtn = new TextButton(this.game, 86, 496, gameOverData.replayBtn, 0x0F5EA3);
     this.replayBtn.onInputDown.add(this.replayGame, this);
     this.game.world.add(this.replayBtn);
 
-    this.shareBtn = new TextButton(this.game, 86, 580, gameOverData.shareBtn, 0xf58022);
-    this.shareBtn.onInputDown.add(this.shareGame, this);
-    this.game.world.add(this.shareBtn);
+    // NOTE: Remove the share buttons from the todd version of the
+    // game. This has been replaced with the high score screen.
+    // this.shareBtn = new TextButton(this.game, 86, 580, gameOverData.shareBtn, 0xf58022);
+    // this.shareBtn.onInputDown.add(this.shareGame, this);
+    // this.game.world.add(this.shareBtn);
 
-    const elite = this.game.add.text(74, 685, this.replaceTokens(gameOverData.elite), {
-      fill: "#000000",
-      font: "32px Arial",
-      wordWrap: true,
-      wordWrapWidth: 492
-    });
+    // const elite = this.game.add.text(74, 685, this.replaceTokens(gameOverData.elite), {
+    //   fill: "#000000",
+    //   font: "32px Arial",
+    //   wordWrap: true,
+    //   wordWrapWidth: 492
+    // });
 
-    this.eliteBtn = new TextButton(this.game, 86, 860, gameOverData.eliteBtn, 0x2a7535);
-    this.eliteBtn.onInputDown.add(this.openElite, this);
-    this.game.world.add(this.eliteBtn);
+    // this.eliteBtn = new TextButton(this.game, 86, 860, gameOverData.eliteBtn, 0x2a7535);
+    // this.eliteBtn.onInputDown.add(this.openElite, this);
+    // this.game.world.add(this.eliteBtn);
   }
 
   replaceTokens ( value ) {
@@ -110,8 +114,8 @@ class GameOver extends Phaser.State {
   }
 
   shareGame ( pointer, e ) {
-    this.game.soundFx.play('social-click');
-    this.shareBtn.visible = false;
+    // this.game.soundFx.play('social-click');
+    // this.shareBtn.visible = false;
   }
 
   openElite ( pointer, e ) {

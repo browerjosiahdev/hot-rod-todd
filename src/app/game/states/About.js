@@ -31,25 +31,25 @@ class About extends Phaser.State {
       wordWrapWidth: 470
     });
 
-    this.facebookBtn = this.game.add.button(250, 775, 'facebook', () => {
-      this.game.shareFacebook();
-    });
-
-    this.twitterBtn = this.game.add.button(334, 775, 'twitter', () => {
-      this.game.shareTwitter();
-    });
+    // this.facebookBtn = this.game.add.button(250, 775, 'facebook', () => {
+    //   this.game.shareFacebook();
+    // });
+    //
+    // this.twitterBtn = this.game.add.button(334, 775, 'twitter', () => {
+    //   this.game.shareTwitter();
+    // });
 
     const resumeBtn = new TextButton(this.game, 86, 690, aboutData.resumeBtn, 0x0F5EA3);
     resumeBtn.onInputDown.add(this.resumeGame, this);
     this.game.world.add(resumeBtn);
 
-    this.shareBtn = new TextButton(this.game, 86, 775, aboutData.shareBtn, 0xf58022);
-    this.shareBtn.onInputDown.add(this.shareGame, this);
-    this.game.world.add(this.shareBtn);
+    // this.shareBtn = new TextButton(this.game, 86, 775, aboutData.shareBtn, 0xf58022);
+    // this.shareBtn.onInputDown.add(this.shareGame, this);
+    // this.game.world.add(this.shareBtn);
 
-    const eliteBtn = new TextButton(this.game, 86, 860, aboutData.eliteBtn, 0x2a7535);
-    eliteBtn.onInputDown.add(this.openElite, this);
-    this.game.world.add(eliteBtn);
+    // const eliteBtn = new TextButton(this.game, 86, 860, aboutData.eliteBtn, 0x2a7535);
+    // eliteBtn.onInputDown.add(this.openElite, this);
+    // this.game.world.add(eliteBtn);
   }
 
   resumeGame ( pointer, e ) {
@@ -58,8 +58,8 @@ class About extends Phaser.State {
   }
 
   shareGame ( pointer, e ) {
-    this.game.soundFx.play('social-click');
-    this.shareBtn.visible = false;
+    // this.game.soundFx.play('social-click');
+    // this.shareBtn.visible = false;
   }
 
   openElite ( pointer, e ) {

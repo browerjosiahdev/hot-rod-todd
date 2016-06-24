@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+  <title>Testing</title>
+</head>
+  <label>Name: </label>
+  <input
+    id="name"
+    maxlength="3"
+    style="text-transform: uppercase;"
+    type="text"
+  />
+  <label>Score: </label>
+  <input id="score" type="number" />
+  <button onclick="onSaveScoreBtnClick();" type="button">Save Score</button>
+  <hr />
+  <button onClick="onGetScoresBtnClick();" type="button">Get Scores</button>
+  <div id="scores"></div>
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+  <script>
+    var windowUrl = window.location.protocol + '//' + window.location.host;
+    var apiUrl = windowUrl + '/api/hotRodTodd/';
+
+    function onGetScoresBtnClick (e) {
+      $.ajax({
+        dataType: 'json',
+        error: function (err) {
+            console.warn('Error loading list: ');
+            console.log(err);
+        },
+        success: function (data) {
+            var scoresContainer = $('#scores');
+            scoresContainer.html('');
+            if (data && data.length) {
+                if (data[0].error) {
+                    console.warn('Error loading list: ');
+                    console.log(data[0].error);
+                } else {
+                    var leaderboard = data.slice(0, 10);
+                    for (var i = 0; i < leaderboard.length; i++) {
+                        var score = leaderboard[i];
+                        scoresContainer.append(
+                        '<div class="score-wrapper">' +
+                            '<span class="name" style="text-transform: uppercase;">' + score.name + '</span>: ' +
+                            '<span class="score">' + score.score + '</span>' +
+                        '</div>'
+                        );
+                    }
+                }
+            }
+        },
+        type: 'GET',
+        url: apiUrl + 'highscore'
+      });
+    }
+
+    function onSaveScoreBtnClick (e) {
+        var userHighScore = {
+            name: $('#name').val(),
+            score: parseInt($('#score').val())
+        };
+        $.ajax({
+            data: userHighScore,
+            error: function (err) {
+                console.warn('Error saving score: ');
+                console.log(err);
+            },
+            success: function () { },
+            type: 'POST',
+            url: apiUrl + 'highscore'
+        });
+    }
+  </script>
+</html>

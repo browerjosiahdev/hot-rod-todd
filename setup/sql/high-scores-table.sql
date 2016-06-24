@@ -1,0 +1,5 @@
+CREATE TABLE high_score (
+	id INT IDENTITY(1, 1) PRIMARY KEY,
+	name VARCHAR(3) NOT NULL,
+	score INT NOT NULL
+);
