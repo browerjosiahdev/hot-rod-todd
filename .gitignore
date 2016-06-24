@@ -1,0 +1,16 @@
+# Logs
+logs
+*.log
+
+# Distribution files
+dist
+
+# Compiled CSS files
+css
+
+# Design directory
+_design
+
+# Dependency directories
+jspm_packages
+node_modules

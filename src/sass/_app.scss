@@ -1,0 +1,52 @@
+/**
+ * Top-level styles for the application
+ */
+body, html {
+  height: 100%;
+}
+
+body {
+  background-color: #c5c3c4;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.app {
+  height: 100%;
+  text-align: center;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.game-panel {
+  color: #666;
+  display: none;
+  font-weight: bold;
+  font-size: 18px;
+  vertical-align: top;
+}
+
+.game {
+  display: inline-block;
+  height: 100%;
+}
+
+.high-score, .high-level {
+  margin-top: 8px;
+}
+
+@media all and (min-width: 975px) {
+  body {
+    padding: 20px;
+  }
+
+  .game-panel {
+    display: inline-block;
+  }
+
+  .game {
+    margin: 0 80px;
+  }
+}

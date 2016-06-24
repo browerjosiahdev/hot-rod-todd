@@ -1,0 +1,50 @@
+{
+  "resources": [
+    "./export/fx.ogg",
+    "./export/fx.m4a",
+    "./export/fx.mp3",
+    "./export/fx.ac3"
+  ],
+  "spritemap": {
+    "boost": {
+      "start": 0,
+      "end": 0.30768707482993196,
+      "loop": false
+    },
+    "button-click": {
+      "start": 2,
+      "end": 3.8249659863945578,
+      "loop": false
+    },
+    "hero-select": {
+      "start": 5,
+      "end": 7.869047619047619,
+      "loop": false
+    },
+    "obstacle": {
+      "start": 9,
+      "end": 10.001020408163265,
+      "loop": false
+    },
+    "social-click": {
+      "start": 12,
+      "end": 14.29734693877551,
+      "loop": false
+    },
+    "star": {
+      "start": 16,
+      "end": 16.809637188208615,
+      "loop": false
+    },
+    "treasure": {
+      "start": 18,
+      "end": 19.346802721088437,
+      "loop": false
+    },
+    "wall": {
+      "start": 21,
+      "end": 22.600952380952382,
+      "loop": false
+    }
+  }
+}
